@@ -1,28 +1,29 @@
-// components/LocationInput.tsx
+// LocationInput.tsx
 import React, { useState } from 'react';
 
 interface LocationInputProps {
   setLocation: (location: string) => void;
 }
 
-function LocationInput({ setLocation }: LocationInputProps) {
-  const [inputLocation, setInputLocation] = useState<string>('');
+const LocationInput: React.FC<LocationInputProps> = ({ setLocation }) => {
+  const [inputValue, setInputValue] = useState('');
 
   const handleLocationChange = () => {
-    setLocation(inputLocation);
+    setLocation(inputValue);
+    setInputValue('');
   };
 
   return (
     <div>
       <input
         type="text"
-        placeholder="Enter location (e.g., city or coordinates)"
-        value={inputLocation}
-        onChange={(e) => setInputLocation(e.target.value)}
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+        placeholder="Enter location"
       />
-      <button onClick={handleLocationChange}>Get Weather</button>
+      <button onClick={handleLocationChange}>Set Location</button>
     </div>
   );
-}
+};
 
 export default LocationInput;
