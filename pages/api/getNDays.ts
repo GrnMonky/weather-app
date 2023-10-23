@@ -1,32 +1,6 @@
 import axios from 'axios';
 import { NextApiRequest, NextApiResponse } from 'next';
 
-export
-interface WeatherForecast {
-  location: {
-    name: string;
-    region: string;
-    country: string;
-    localtime: string;
-  };
-  forecast: {
-    forecastday: Array<{
-      date: string;
-      day: {
-        maxtemp_c: number;
-        mintemp_c: number;
-        condition: {
-          text: string;
-          icon: string;
-        };
-        avghumidity: number;
-        // Add more properties as needed
-      };
-    }>;
-  };
-}
-
-
 // Function to fetch the daily weather forecast
 async function getNDaysForecast(location: string, numberOfDays: number): Promise<any | undefined> {
   const BASE_URL = 'https://api.weatherapi.com/v1'; // Replace with your API endpoint
