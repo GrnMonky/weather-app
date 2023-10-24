@@ -20,17 +20,12 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Deployed on Vercel at: https://weather-app-delta-orcin.vercel.app
 
-To learn more about Next.js, take a look at the following resources:
+**How I would enhance it:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Functionality and UI Review:** Initially, I focused on functionality. The next step would involve consulting with the client or team lead to ensure that the UI design in the mock-up aligns precisely with their vision, rather than being just a quick sketch. I usually like to do this before dedicating a significant amount of time to strive for an exact match with the mock-up.
+- **Implement a State Manager:** While the current version doesn't seem to require a state manager, I would consider adding one. Depending on the client's expansion plans for the app, it may be beneficial to move elements like the searched location into a global state manager like Redux for better scalability and manageability.
+- **Introduce Routing:** Presently, the application is designed as a single-page app, even though the designs resemble a two-page structure. Since both pages have very similar UI, aside from some component switching, I prefer to switch the components rather than adding the unnecessary overhead of a router. However, a router would be needed if the client intends to expand the app beyond these two pages.
+- **Enhance Error Handling:** Given the API's capability to accommodate various search types, I would discuss error handling with the client. Questions to consider include how error messages should be presented: Should an error message pop up while preserving the existing content, or should it clear the existing content? Should users be limited to a dropdown menu of locations? As of now, I've checked to make sure the app doesn't crash.
+- **Adding Multiple Languages:** Currently, the app has hard-coded English strings. Although it wasn't specified in the design requirements, adding and testing multiple languages in the UI would be a valuable addition.
