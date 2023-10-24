@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 interface NextNDaysProps {
   location: string;
   numberOfDays: number;
-  setDate: (date: string) => void; // Add setDate prop
+  setDate: (date: string) => void;
 }
 
 function NextNDays({ location, numberOfDays, setDate }: NextNDaysProps) {

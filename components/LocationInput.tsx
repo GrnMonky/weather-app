@@ -9,6 +9,7 @@ const LocationInput: React.FC<LocationInputProps> = ({ setLocation }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleLocationChange = () => {
+    //Need to check for valid location first
     setLocation(inputValue);
     setInputValue('');
   };
@@ -20,7 +21,7 @@ const LocationInput: React.FC<LocationInputProps> = ({ setLocation }) => {
     value={inputValue}
     onChange={(e) => setInputValue(e.target.value)}
     placeholder="Enter location"
-    className="text-black bg-white" // Set text color to black and background to white
+    className="text-black bg-white" 
   />
   <button
     onClick={handleLocationChange}

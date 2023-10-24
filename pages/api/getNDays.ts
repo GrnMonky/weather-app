@@ -3,8 +3,8 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 // Function to fetch the daily weather forecast
 async function getNDaysForecast(location: string, numberOfDays: number): Promise<any | undefined> {
-  const BASE_URL = 'https://api.weatherapi.com/v1'; // Replace with your API endpoint
-  const API_KEY = process.env.WEATHER_API_KEY; // Replace with your actual API key
+  const BASE_URL = 'https://api.weatherapi.com/v1';
+  const API_KEY = process.env.WEATHER_API_KEY;
 
   try {
     const response = await axios.get(

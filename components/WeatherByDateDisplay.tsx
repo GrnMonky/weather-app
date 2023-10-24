@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 interface WeatherByDateProps {
   location: string;
-  date: string; // Add a date prop
+  date: string;
 }
 
 function WeatherByDate({ location, date }: WeatherByDateProps) {
@@ -28,7 +28,7 @@ function WeatherByDate({ location, date }: WeatherByDateProps) {
     }
 
     fetchData();
-  }, [location, date]); // Listen for changes in both location and date
+  }, [location, date]);
 
   return (
     <div>
